@@ -1,0 +1,21 @@
+1. npm install
+2. npm run build
+3. npm install --save-dev html-webpack-plugin
+4. npm install --save-dev rimraf
+5. npm install --save-dev webpack-dev-server@2.2.0-rc.0
+6. npm run serve
+
+7. From 
+	"build": "npm run clean && webpack"
+	to prepare the project to production change to
+
+	"build": "NODE_ENV=production npm run clean && webpack -p",
+
+	where -p will tell to webapack that we want production mode
+	and in this case the webpack will minify all js code
+
+
+8. npm install -g surge
+	 surge -p dist
+
+	 dist is the folder
